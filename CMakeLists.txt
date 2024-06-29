@@ -26,6 +26,8 @@ link_directories(${SDL2_LIBRARY_DIRS} ${SDL2_IMAGE_LIBRARY_DIRS} ${SDL2_MIXER_LI
 set(SOURCES
     src/main.cpp
     src/pong.cpp
+    src/player.cpp
+    src/ball.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

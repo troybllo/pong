@@ -129,6 +129,30 @@ pong/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/build
 .PHONY : pong/fast
 
+src/ball.o: src/ball.cpp.o
+.PHONY : src/ball.o
+
+# target to build an object file
+src/ball.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/ball.cpp.o
+.PHONY : src/ball.cpp.o
+
+src/ball.i: src/ball.cpp.i
+.PHONY : src/ball.i
+
+# target to preprocess a source file
+src/ball.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/ball.cpp.i
+.PHONY : src/ball.cpp.i
+
+src/ball.s: src/ball.cpp.s
+.PHONY : src/ball.s
+
+# target to generate assembly for a file
+src/ball.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/ball.cpp.s
+.PHONY : src/ball.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -152,6 +176,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/player.o: src/player.cpp.o
+.PHONY : src/player.o
+
+# target to build an object file
+src/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/player.cpp.o
+.PHONY : src/player.cpp.o
+
+src/player.i: src/player.cpp.i
+.PHONY : src/player.i
+
+# target to preprocess a source file
+src/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/player.cpp.i
+.PHONY : src/player.cpp.i
+
+src/player.s: src/player.cpp.s
+.PHONY : src/player.s
+
+# target to generate assembly for a file
+src/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pong.dir/build.make CMakeFiles/pong.dir/src/player.cpp.s
+.PHONY : src/player.cpp.s
 
 src/pong.o: src/pong.cpp.o
 .PHONY : src/pong.o
@@ -186,9 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pong"
+	@echo "... src/ball.o"
+	@echo "... src/ball.i"
+	@echo "... src/ball.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/player.o"
+	@echo "... src/player.i"
+	@echo "... src/player.s"
 	@echo "... src/pong.o"
 	@echo "... src/pong.i"
 	@echo "... src/pong.s"
