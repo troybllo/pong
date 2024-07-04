@@ -1202,6 +1202,7 @@ CMakeFiles/pong.dir/src/main.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h
  /Users/troybello/Projects/practice/pong/src/Ball.h
+ /Users/troybello/Projects/practice/pong/src/ControlScheme.h
  /Users/troybello/Projects/practice/pong/src/Game.h
  /Users/troybello/Projects/practice/pong/src/Player.h
  /opt/homebrew/include/SDL2/SDL.h
@@ -1545,6 +1546,7 @@ CMakeFiles/pong.dir/src/player.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdarg.h
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h
+ /Users/troybello/Projects/practice/pong/src/ControlScheme.h
  /Users/troybello/Projects/practice/pong/src/Player.h
  /opt/homebrew/include/SDL2/SDL.h
  /opt/homebrew/include/SDL2/SDL_assert.h
@@ -2460,6 +2462,7 @@ CMakeFiles/pong.dir/src/pong.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h
  /Users/troybello/Projects/practice/pong/src/Ball.h
+ /Users/troybello/Projects/practice/pong/src/ControlScheme.h
  /Users/troybello/Projects/practice/pong/src/Game.h
  /Users/troybello/Projects/practice/pong/src/Player.h
  /opt/homebrew/include/SDL2/SDL.h

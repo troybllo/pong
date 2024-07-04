@@ -1,5 +1,6 @@
 
 #include "Ball.h"
+#include "ControlScheme.h"
 #include "Game.h"
 #include "Player.h"
 #include "SDL.h"
@@ -10,9 +11,7 @@
 #include <SDL2/SDL_mixer.h>
 #include <iostream>
 
-Game::Game()
-    : window(nullptr), renderer(nullptr), isRunning(false), player(nullptr),
-      ball(nullptr), score(0) {}
+Game::Game() : window(nullptr), renderer(nullptr), isRunning(false), score(0) {}
 
 Game::~Game() { clean(); }
 
@@ -43,9 +42,13 @@ bool Game::init(const std::string &title, int width, int height,
           return false;
         }
 
-        player = new Player(0, 100, 25, 100);
-        players.push_back(new Player(800, 100, 25, 100));
-        ball = new Ball(450, 300, 30, 30);
+        ControlScheme player1Controls = {SDLK_w, SDLK_s, SDLK_d, SDLK_a};
+        ControlScheme player2Controls = {SDLK_UP, SDLK_DOWN, SDLK_RIGHT,
+                                         SDLK_LEFT};
+
+        players.push_back(new Player(0, 100, 25, 100, player1Controls));
+        players.push_back(new Player(773, 100, 25, 100, player2Controls));
+        balls.push_back(new Ball(400, 300, 20, 30));
 
         isRunning = true;
       } else {
@@ -80,38 +83,54 @@ void Game::handleEvents() {
     case SDLK_ESCAPE:
       isRunning = false;
       break;
+    case SDLK_q:
+      isRunning = false;
     default:
       break;
     }
-    player->handleInput(event);
+
+    for (auto &player : players) {
+      player->handleInput(event);
+    }
   }
 }
 
 void Game::update() {
-  player->update();
-  ball->update();
 
-  if (checkCollision(player->getRect(), ball->getRect())) {
-    std::cout << "Collision detected!" << std::endl;
-
-    score += 1; // Increment score
-    std::cout << "Score: " << score << std::endl;
-
-    ball->~Ball();
-    ball = new Ball(rand() % 200, 0, 50, 50);
+  for (auto &player : players) {
+    player->update();
   }
-  // Update game objects
+
+  for (auto &ball : balls) {
+    ball->update();
+    // Check collision with player
+
+    for (auto &player : players) {
+      if (checkCollision(player->getRect(), ball->getRect())) {
+        std::cout << "Collision detected!" << std::endl;
+        score += 1;                                   // Increment score
+        std::cout << "Score: " << score << std::endl; // Print score to console
+        // Handle collision (e.g., reset enemy position)
+        ball->~Ball();
+        ball = new Ball(rand() % 600, 0, 50,
+                        50); // Randomize enemy's new x position
+      }
+    }
+
+    // Update game objects
+  }
 }
 
 void Game::render() {
   SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
   SDL_RenderClear(renderer);
 
-  player->render(renderer);
-  ball->render(renderer);
-
   for (auto &ball : balls) {
     ball->render(renderer);
+  }
+
+  for (auto &player : players) {
+    player->render(renderer);
   }
 
   // Render game objects
@@ -119,10 +138,13 @@ void Game::render() {
 }
 
 void Game::clean() {
-  delete player;
 
   for (auto &ball : balls) {
     delete ball;
+  }
+
+  for (auto &player : players) {
+    delete player;
   }
 
   balls.clear();

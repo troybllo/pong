@@ -340,6 +340,7 @@ CMakeFiles/pong.dir/src/main.cpp.o: \
   /opt/homebrew/include/SDL2/SDL_locale.h \
   /opt/homebrew/include/SDL2/SDL_misc.h \
   /Users/troybello/Projects/practice/pong/src/Player.h \
+  /Users/troybello/Projects/practice/pong/src/ControlScheme.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \

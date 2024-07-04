@@ -12,10 +12,12 @@ public:
   void update();
   void render(SDL_Renderer *renderer);
 
+  void reset();
   SDL_Rect getRect() const;
 
 private:
   SDL_Rect rect;
+  int xVel, yVel;
 };
 
 #endif // ENEMY_H

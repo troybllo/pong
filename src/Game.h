@@ -25,13 +25,11 @@ private:
   SDL_Window *window;
   SDL_Renderer *renderer;
   bool isRunning;
-  Player *player;
-  Ball *ball;
 
   int score;
 
-  std::vector<Ball *> balls;
   std::vector<Player *> players;
+  std::vector<Ball *> balls;
 
   bool checkCollision(const SDL_Rect &a, const SDL_Rect &b);
 };

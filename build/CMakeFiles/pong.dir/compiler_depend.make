@@ -1200,6 +1200,7 @@ CMakeFiles/pong.dir/src/main.cpp.o: /Users/troybello/Projects/practice/pong/src/
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
   /Users/troybello/Projects/practice/pong/src/Ball.h \
+  /Users/troybello/Projects/practice/pong/src/ControlScheme.h \
   /Users/troybello/Projects/practice/pong/src/Game.h \
   /Users/troybello/Projects/practice/pong/src/Player.h \
   /opt/homebrew/include/SDL2/SDL.h \
@@ -1542,6 +1543,7 @@ CMakeFiles/pong.dir/src/player.cpp.o: /Users/troybello/Projects/practice/pong/sr
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/troybello/Projects/practice/pong/src/ControlScheme.h \
   /Users/troybello/Projects/practice/pong/src/Player.h \
   /opt/homebrew/include/SDL2/SDL.h \
   /opt/homebrew/include/SDL2/SDL_assert.h \
@@ -2456,6 +2458,7 @@ CMakeFiles/pong.dir/src/pong.cpp.o: /Users/troybello/Projects/practice/pong/src/
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
   /Users/troybello/Projects/practice/pong/src/Ball.h \
+  /Users/troybello/Projects/practice/pong/src/ControlScheme.h \
   /Users/troybello/Projects/practice/pong/src/Game.h \
   /Users/troybello/Projects/practice/pong/src/Player.h \
   /opt/homebrew/include/SDL2/SDL.h \
@@ -4135,6 +4138,8 @@ CMakeFiles/pong.dir/src/pong.cpp.o: /Users/troybello/Projects/practice/pong/src/
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/alignment_of.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/add_rvalue_reference.h:
+
+/Users/troybello/Projects/practice/pong/src/ControlScheme.h:
 
 /opt/homebrew/include/SDL2/SDL_cpuinfo.h:
 

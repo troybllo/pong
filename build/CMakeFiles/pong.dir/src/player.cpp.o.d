@@ -1,7 +1,8 @@
 CMakeFiles/pong.dir/src/player.cpp.o: \
   /Users/troybello/Projects/practice/pong/src/player.cpp \
   /Users/troybello/Projects/practice/pong/src/Player.h \
-  /opt/homebrew/include/SDL2/SDL.h /opt/homebrew/include/SDL2/SDL_main.h \
+  /Users/troybello/Projects/practice/pong/src/ControlScheme.h \
+  /opt/homebrew/include/SDL2/SDL_keycode.h \
   /opt/homebrew/include/SDL2/SDL_stdinc.h \
   /opt/homebrew/include/SDL2/SDL_config.h \
   /opt/homebrew/include/SDL2/SDL_platform.h \
@@ -293,6 +294,8 @@ CMakeFiles/pong.dir/src/player.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/float.h \
+  /opt/homebrew/include/SDL2/SDL_scancode.h \
+  /opt/homebrew/include/SDL2/SDL.h /opt/homebrew/include/SDL2/SDL_main.h \
   /opt/homebrew/include/SDL2/SDL_assert.h \
   /opt/homebrew/include/SDL2/SDL_atomic.h \
   /opt/homebrew/include/SDL2/SDL_audio.h \
@@ -312,8 +315,6 @@ CMakeFiles/pong.dir/src/player.cpp.o: \
   /opt/homebrew/include/SDL2/SDL_surface.h \
   /opt/homebrew/include/SDL2/SDL_blendmode.h \
   /opt/homebrew/include/SDL2/SDL_keyboard.h \
-  /opt/homebrew/include/SDL2/SDL_keycode.h \
-  /opt/homebrew/include/SDL2/SDL_scancode.h \
   /opt/homebrew/include/SDL2/SDL_mouse.h \
   /opt/homebrew/include/SDL2/SDL_joystick.h \
   /opt/homebrew/include/SDL2/SDL_guid.h \

@@ -338,6 +338,7 @@ CMakeFiles/pong.dir/src/pong.cpp.o: \
   /opt/homebrew/include/SDL2/SDL_version.h \
   /opt/homebrew/include/SDL2/SDL_locale.h \
   /opt/homebrew/include/SDL2/SDL_misc.h \
+  /Users/troybello/Projects/practice/pong/src/ControlScheme.h \
   /Users/troybello/Projects/practice/pong/src/Game.h \
   /Users/troybello/Projects/practice/pong/src/Player.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \

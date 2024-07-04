@@ -1,7 +1,9 @@
 
 #include "Player.h"
+#include "ControlScheme.h"
 
-Player::Player(int x, int y, int width, int height) : speed(15) {
+Player::Player(int x, int y, int width, int height, ControlScheme controls)
+    : speed(25), controlScheme(controls) {
   rect = {x, y, width, height};
 }
 
@@ -9,19 +11,14 @@ Player::~Player() {}
 
 void Player::handleInput(const SDL_Event &event) {
   if (event.type == SDL_KEYDOWN) {
-    switch (event.key.keysym.sym) {
-    case SDLK_w:
+    if (event.key.keysym.sym == controlScheme.moveUp) { // Move up
       rect.y -= speed;
-      break;
-    case SDLK_s:
+    } else if (event.key.keysym.sym == controlScheme.moveDown) { // Move down
       rect.y += speed;
-      break;
-    case SDLK_a:
+    } else if (event.key.keysym.sym == controlScheme.moveLeft) { // Move left
       rect.x -= speed;
-      break;
-    case SDLK_d:
+    } else if (event.key.keysym.sym == controlScheme.moveRight) { // Move right
       rect.x += speed;
-      break;
     }
   }
 }
