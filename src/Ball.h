@@ -13,6 +13,7 @@ public:
   void render(SDL_Renderer *renderer);
 
   void reset();
+  void reverseX();
   SDL_Rect getRect() const;
 
 private:

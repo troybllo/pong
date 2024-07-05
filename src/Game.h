@@ -4,6 +4,7 @@
 
 #include "Ball.h"
 #include "Player.h"
+#include "SDL_stdinc.h"
 #include <SDL2/SDL.h>
 #include <string>
 #include <vector>
@@ -21,6 +22,12 @@ public:
 
   bool running() { return isRunning; }
 
+  void setFrameStart(Uint32 start) { frameStart = start; }
+  Uint32 getFrameStart() const { return frameStart; }
+  int getFrameTime() const { return frameTime; }
+  void setFrameTime(int time) { frameTime = time; }
+  int getFrameDelay() const { return frameDelay; }
+
 private:
   SDL_Window *window;
   SDL_Renderer *renderer;
@@ -32,6 +39,10 @@ private:
   std::vector<Ball *> balls;
 
   bool checkCollision(const SDL_Rect &a, const SDL_Rect &b);
+
+  const int frameDelay = 1000 / 60;
+  Uint32 frameStart;
+  int frameTime;
 };
 
 #endif // GAME_H

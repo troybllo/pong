@@ -13,11 +13,11 @@ void Ball::update() {
   rect.x += xVel;
   rect.y += yVel;
 
-  if (rect.y < 0 || rect.y + rect.h > 480) {
+  if (rect.y < 0 || rect.y + rect.h > 600) {
     yVel = -yVel;
   }
 
-  if (rect.x < 0 || rect.x + rect.w > 640) {
+  if (rect.x < 0 || rect.x + rect.w > 800) {
     reset();
   }
 }
@@ -26,6 +26,8 @@ void Ball::render(SDL_Renderer *renderer) {
   SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
   SDL_RenderFillRect(renderer, &rect);
 }
+
+void Ball::reverseX() { xVel = -xVel; }
 
 void Ball::reset() {
   rect.x = 320 - rect.w / 2;

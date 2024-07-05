@@ -111,9 +111,7 @@ void Game::update() {
         score += 1;                                   // Increment score
         std::cout << "Score: " << score << std::endl; // Print score to console
         // Handle collision (e.g., reset enemy position)
-        ball->~Ball();
-        ball = new Ball(rand() % 600, 0, 50,
-                        50); // Randomize enemy's new x position
+        ball->reverseX();
       }
     }
 
